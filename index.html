@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Giảng Tương Tác: IELTS Speaking - Daily Routine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .lesson-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 20px;
+        }
+        .slide-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .slide-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+        .interactive-section {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 1.5rem;
+            line-height: 1.8;
+        }
+        .option-label {
+            display: block;
+            background-color: #edf2f7;
+            padding: 0.8rem 1.25rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            font-size: 1rem;
+            color: #4a5568;
+            border: 1px solid #e2e8f0;
+        }
+        .option-label:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+        .option-input:checked + .option-label {
+            background-color: #63b3ed;
+            color: white;
+            border-color: #4299e1;
+            box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
+        }
+        .option-input {
+            display: none;
+        }
+        .button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover:enabled {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .quiz-check-button {
+            background-color: #dc2626;
+            color: white;
+        }
+        .quiz-check-button:hover:enabled {
+            background-color: #b91c1c;
+        }
+        .lesson-nav-button {
+            background-color: #48bb78;
+            color: white;
+        }
+        .lesson-nav-button:hover:enabled {
+            background-color: #38a169;
+        }
+        .feedback-message {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .feedback-correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .feedback-incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .final-message {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .restart-button {
+            background-color: #f6ad55;
+            color: white;
+            margin-top: 1rem;
+        }
+        .restart-button:hover:enabled {
+            background-color: #ed8936;
+        }
+    </style>
+</head>
+<body>
+    <div class="lesson-container">
+        <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-6">Bài Giảng Tương Tác: IELTS Speaking - Daily Routine</h1>
+
+        <div id="lesson-slides">
+            <div id="slide-0" class="lesson-slide">
+                <h2 class="slide-title">Slide 1: Giới thiệu chủ đề "Daily Routine"</h2>
+                <p class="slide-content">Chào mừng bạn đến với bài giảng về chủ đề **Daily Routine** (Thói quen hàng ngày) trong IELTS Speaking. Đây là một chủ đề rất phổ biến ở Part 1, nhưng cũng có thể mở rộng ra các phần khác.</p>
+                <p class="slide-content">Mục tiêu của chúng ta là học các từ vựng, cụm từ và cấu trúc câu để trả lời một cách tự nhiên và mạch lạc.</p>
+            </div>
+
+            <div id="slide-1" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 2: Từ vựng cốt lõi</h2>
+                <p class="slide-content">Một số từ vựng hữu ích để miêu tả các hoạt động hàng ngày:</p>
+                <ul class="list-disc list-inside slide-content">
+                    <li>`wake up / get up`: thức dậy</li>
+                    <li>`have breakfast / lunch / dinner`: ăn sáng/trưa/tối</li>
+                    <li>`commute to work/school`: đi làm/đi học</li>
+                    <li>`get off work / finish work`: tan làm</li>
+                    <li>`unwind / relax`: thư giãn</li>
+                    <li>`do household chores`: làm việc nhà</li>
+                    <li>`hit the hay / go to bed`: đi ngủ</li>
+                </ul>
+            </div>
+
+            <div id="slide-2" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 3: Luyện tập Từ vựng</h2>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu hỏi: Chọn từ/cụm từ đúng để miêu tả "thư giãn sau một ngày làm việc".</p>
+                    <div id="quiz-1-options" class="mb-4">
+                        <input type="radio" name="quiz1" id="q1o1" value="A" class="option-input"><label for="q1o1" class="option-label">A. get off work</label>
+                        <input type="radio" name="quiz1" id="q1o2" value="B" class="option-input"><label for="q1o2" class="option-label">B. commute</label>
+                        <input type="radio" name="quiz1" id="q1o3" value="C" class="option-input"><label for="q1o3" class="option-label">C. unwind</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="1" data-answer="C">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-1"></div>
+                </div>
+            </div>
+
+            <div id="slide-3" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 4: Chiến lược Speaking Part 1</h2>
+                <p class="slide-content">**Nguyên tắc vàng:** Luôn mở rộng câu trả lời. </p>
+                <p class="slide-content">**Cấu trúc:** Trả lời trực tiếp (**Answer**) + giải thích (**Reason**) + ví dụ/chi tiết (**Example**).</p>
+                <p class="slide-content">**Ví dụ:** `I’m a student. (Answer) I’m currently studying Finance at a university in Hanoi (Reason). I have classes from Monday to Friday. (Example)`</p>
+            </div>
+
+            <div id="slide-4" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 5: Luyện tập Part 1</h2>
+                <p class="slide-content">**Câu hỏi:** "Do you prefer to wake up early or late?"</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu trả lời nào thể hiện chiến lược "Answer-Reason-Example" tốt nhất?</p>
+                    <div id="quiz-2-options" class="mb-4">
+                        <input type="radio" name="quiz2" id="q2o1" value="A" class="option-input"><label for="q2o1" class="option-label">A. I like to wake up early.</label>
+                        <input type="radio" name="quiz2" id="q2o2" value="B" class="option-input"><label for="q2o2" class="option-label">B. I prefer to wake up early because it helps me feel productive. For instance, I can do some exercise and have a healthy breakfast before starting work.</label>
+                        <input type="radio" name="quiz2" id="q2o3" value="C" class="option-input"><label for="q2o3" class="option-label">C. Waking up early is good for health.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="2" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-2"></div>
+                </div>
+            </div>
+            
+            <div id="slide-5" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 6: Chiến lược Speaking Part 2</h2>
+                <p class="slide-content">**Mục tiêu:** Kể một câu chuyện theo các gợi ý của đề bài (cue card).</p>
+                <p class="slide-content">**Các lỗi thường mắc:**
+                <ul class="list-disc list-inside slide-content">
+                    <li>**Chỉ đọc lại các gợi ý:** Bạn cần mở rộng từng gợi ý thành các ý nhỏ hơn.</li>
+                    <li>**Dừng lại quá lâu:** Dùng 1 phút chuẩn bị để phác thảo các ý tưởng chính.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div id="slide-6" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 7: Luyện tập Part 2</h2>
+                <p class="slide-content">**Đề bài:** Describe a typical day you had at work or school that you enjoyed.</p>
+                <p class="slide-content">Bạn nên làm gì trong 1 phút chuẩn bị?</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <div id="quiz-3-options" class="mb-4">
+                        <input type="radio" name="quiz3" id="q3o1" value="A" class="option-input"><label for="q3o1" class="option-label">A. Viết một bài văn hoàn chỉnh.</label>
+                        <input type="radio" name="quiz3" id="q3o2" value="B" class="option-input"><label for="q3o2" class="option-label">B. Gạch chân các từ khóa và nghĩ về các ý tưởng chính.</label>
+                        <input type="radio" name="quiz3" id="q3o3" value="C" class="option-input"><label for="q3o3" class="option-label">C. Thư giãn và đợi giám khảo yêu cầu nói.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="3" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-3"></div>
+                </div>
+            </div>
+
+            <div id="slide-7" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 8: Cấu trúc trả lời Part 2</h2>
+                <p class="slide-content">Khi kể chuyện, hãy dùng các từ nối thời gian để câu chuyện mạch lạc hơn:</p>
+                <ul class="list-disc list-inside slide-content">
+                    <li>`First, I started my day by...`</li>
+                    <li>`After that, I went to...`</li>
+                    <li>`In the afternoon, I had...`</li>
+                    <li>`Finally, I concluded my day by...`</li>
+                </ul>
+            </div>
+
+            <div id="slide-8" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 9: Luyện tập Part 2</h2>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu hỏi: Chọn từ nối phù hợp nhất để nối hai câu sau.</p>
+                    <p class="mb-2">"I woke up at 6 a.m. I had a quick breakfast."</p>
+                    <div id="quiz-4-options" class="mb-4">
+                        <input type="radio" name="quiz4" id="q4o1" value="A" class="option-input"><label for="q4o1" class="option-label">A. After that</label>
+                        <input type="radio" name="quiz4" id="q4o2" value="B" class="option-input"><label for="q4o2" class="option-label">B. However</label>
+                        <input type="radio" name="quiz4" id="q4o3" value="C" class="option-input"><label for="q4o3" class="option-label">C. In contrast</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="4" data-answer="A">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-4"></div>
+                </div>
+            </div>
+            
+            <div id="slide-9" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 10: Chiến lược Speaking Part 3</h2>
+                <p class="slide-content">**Mục tiêu:** Thảo luận, phân tích và đưa ra quan điểm cá nhân.</p>
+                <p class="slide-content">**Cấu trúc:** Trả lời trực tiếp + Giải thích + So sánh/Đối chiếu + Kết luận.</p>
+                <p class="slide-content">**Ví dụ:** "I believe that... because... However, on the other hand... Therefore,..."</p>
+            </div>
+
+            <div id="slide-10" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 11: Luyện tập Part 3</h2>
+                <p class="slide-content">**Câu hỏi:** "How has technology changed people's daily routines?"</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu trả lời nào thể hiện một quan điểm sâu sắc hơn?</p>
+                    <div id="quiz-5-options" class="mb-4">
+                        <input type="radio" name="quiz5" id="q5o1" value="A" class="option-input"><label for="q5o1" class="option-label">A. Technology has changed our daily routines a lot. We use phones and computers every day.</label>
+                        <input type="radio" name="quiz5" id="q5o2" value="B" class="option-input"><label for="q5o2" class="option-label">B. Technology has fundamentally altered our routines. For example, remote work has made it possible for many people to avoid the morning commute, which was a major part of the day in the past. This has given people more flexibility, but it has also blurred the line between work and private life.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="5" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-5"></div>
+                </div>
+            </div>
+
+            <div id="slide-11" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 12: Lỗi thường gặp Part 3</h2>
+                <p class="slide-content">Hãy tránh các lỗi sau:</p>
+                <ul class="list-disc list-inside slide-content">
+                    <li>**Trả lời quá ngắn:** Trả lời một câu hoặc hai câu sẽ không thể hiện được trình độ của bạn.</li>
+                    <li>**Trả lời quá đơn giản:** Sử dụng từ vựng đơn giản, lặp từ sẽ khiến bạn bị điểm thấp.</li>
+                    <li>**Không có quan điểm:** Part 3 yêu cầu bạn thể hiện quan điểm của mình, đừng chỉ liệt kê các ý tưởng.</li>
+                </ul>
+            </div>
+            
+            <div id="slide-12" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 13: Cấu trúc câu nâng cao</h2>
+                <p class="slide-content">Sử dụng các cấu trúc này để đạt điểm ngữ pháp cao:</p>
+                <ul class="list-disc list-inside slide-content">
+                    <li>**Câu phức:** `While/Whereas...`, `Although...`, `which...`</li>
+                    <li>**Câu bị động:** `It is believed that...`, `It is thought that...`</li>
+                    <li>**Câu điều kiện:** `If I had more time, I would...`</li>
+                </ul>
+            </div>
+
+            <div id="slide-13" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 14: Luyện tập</h2>
+                <p class="slide-content">**Câu hỏi:** "Compare a student's daily routine with a retired person's."</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu trả lời nào sử dụng câu phức tốt nhất?</p>
+                    <div id="quiz-6-options" class="mb-4">
+                        <input type="radio" name="quiz6" id="q6o1" value="A" class="option-input"><label for="q6o1" class="option-label">A. A student's routine is very busy, but a retired person has a lot of free time.</label>
+                        <input type="radio" name="quiz6" id="q6o2" value="B" class="option-input"><label for="q6o2" class="option-label">B. While a student's routine is typically very busy and structured, a retired person's schedule is often much more flexible, which gives them more freedom to pursue hobbies.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="6" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-6"></div>
+                </div>
+            </div>
+            
+            <div id="slide-14" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 15: Luyện tập tổng hợp</h2>
+                <p class="slide-content">**Câu hỏi:** "Do you prefer to cook at home or eat out?"</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu trả lời nào có nhiều chi tiết hơn?</p>
+                    <div id="quiz-7-options" class="mb-4">
+                        <input type="radio" name="quiz7" id="q7o1" value="A" class="option-input"><label for="q7o1" class="option-label">A. I like to cook at home because it is cheaper.</label>
+                        <input type="radio" name="quiz7" id="q7o2" value="B" class="option-input"><label for="q7o2" class="option-label">B. I prefer to cook at home because it is often healthier and cheaper. However, eating out is great for special occasions, such as celebrating a birthday or a promotion, as it's a good way to relax and socialize.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="7" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-7"></div>
+                </div>
+            </div>
+
+            <div id="slide-15" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 16: Luyện tập tổng hợp</h2>
+                <p class="slide-content">**Câu hỏi:** "What is your typical weekday like?"</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu trả lời nào có từ vựng tốt hơn?</p>
+                    <div id="quiz-8-options" class="mb-4">
+                        <input type="radio" name="quiz8" id="q8o1" value="A" class="option-input"><label for="q8o1" class="option-label">A. My typical weekday is busy. I get up at 7, eat breakfast, and then go to work. After work, I come home and eat dinner and watch TV.</label>
+                        <input type="radio" name="quiz8" id="q8o2" value="B" class="option-input"><label for="q8o2" class="option-label">B. My weekdays are generally quite hectic. I usually get up early to catch the bus to work, where I spend the majority of my day. In the evenings, I often cook dinner and do some household chores before unwinding by reading a book or watching a film.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="8" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-8"></div>
+                </div>
+            </div>
+
+            <div id="slide-16" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 17: Luyện tập tổng hợp</h2>
+                <p class="slide-content">**Câu hỏi:** "Is it important to plan your daily routine?"</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu trả lời nào thể hiện quan điểm sâu sắc hơn?</p>
+                    <div id="quiz-9-options" class="mb-4">
+                        <input type="radio" name="quiz9" id="q9o1" value="A" class="option-input"><label for="q9o1" class="option-label">A. Yes, it is important to plan your daily routine because it helps you to be organized.</label>
+                        <input type="radio" name="quiz9" id="q9o2" value="B" class="option-input"><label for="q9o2" class="option-label">B. Yes, I think it is crucial to plan your daily routine. By setting a clear schedule, you can manage your time more efficiently and ensure that you complete all your tasks. Without a plan, it's easy to waste time and become less productive throughout the day.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="9" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-9"></div>
+                </div>
+            </div>
+            
+            <div id="slide-17" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 18: Luyện tập tổng hợp</h2>
+                <p class="slide-content">**Câu hỏi:** "What are the differences between a student's routine and a worker's routine?"</p>
+                <div class="interactive-section mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="font-semibold text-blue-800 mb-4">Câu trả lời nào có từ vựng tốt hơn?</p>
+                    <div id="quiz-10-options" class="mb-4">
+                        <input type="radio" name="quiz10" id="q10o1" value="A" class="option-input"><label for="q10o1" class="option-label">A. A student's routine is different because they have to study, while a worker has to work.</label>
+                        <input type="radio" name="quiz10" id="q10o2" value="B" class="option-input"><label for="q10o2" class="option-label">B. The routines of a student and a worker are quite distinct. A student’s day is largely focused on academic pursuits, which involves attending classes and doing homework. In contrast, a worker’s day is more centered around their professional duties and meeting deadlines, often with less flexibility.</label>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button class="button quiz-check-button" data-quiz-id="10" data-answer="B">Kiểm Tra</button>
+                    </div>
+                    <div class="feedback-message hidden" id="feedback-10"></div>
+                </div>
+            </div>
+
+            <div id="slide-18" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 19: Tổng kết</h2>
+                <p class="slide-content">Chúc mừng bạn đã hoàn thành bài giảng! Hãy nhớ các điểm chính:</p>
+                <ul class="list-disc list-inside slide-content">
+                    <li>**Part 1:** Answer-Reason-Example. Trả lời ngắn nhưng đầy đủ.</li>
+                    <li>**Part 2:** Lập dàn ý bằng từ khóa trong 1 phút chuẩn bị. Kể chuyện trong 2 phút.</li>
+                    <li>**Part 3:** Mở rộng câu trả lời, sử dụng từ vựng nâng cao và các cấu trúc câu phức.</li>
+                    <li>**Chủ đề "Daily Routine":** Tự tin chia sẻ về cuộc sống hàng ngày của bạn với các từ vựng và cụm từ đã học.</li>
+                </ul>
+            </div>
+
+            <div id="slide-19" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 20: Kết thúc</h2>
+                <p class="final-message">🎉 Chúc mừng! Bạn đã hoàn thành bài giảng về IELTS Speaking - Daily Routine.</p>
+                <button id="restart-lesson-button" class="button restart-button w-full mt-8">Học Lại Bài Giảng</button>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-8">
+            <button id="prev-slide-button" class="button lesson-nav-button" disabled>Slide Trước</button>
+            <span id="slide-indicator" class="text-lg font-semibold text-gray-700">Slide 1 / 20</span>
+            <button id="next-slide-button" class="button lesson-nav-button">Slide Tiếp Theo</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.lesson-slide');
+        const prevButton = document.getElementById('prev-slide-button');
+        const nextButton = document.getElementById('next-slide-button');
+        const slideIndicator = document.getElementById('slide-indicator');
+        const restartLessonButton = document.getElementById('restart-lesson-button');
+        const totalLessonSlides = slides.length - 1;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.add('hidden');
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                }
+            });
+
+            prevButton.disabled = (index === 0);
+            
+            if (index < totalLessonSlides) {
+                nextButton.classList.remove('hidden');
+            } else {
+                nextButton.classList.add('hidden');
+            }
+
+            if (index < totalLessonSlides) {
+                slideIndicator.textContent = `Slide ${index + 1} / ${totalLessonSlides}`;
+            } else {
+                slideIndicator.textContent = `Hoàn thành!`;
+            }
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                showSlide(currentSlideIndex);
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentSlideIndex < totalLessonSlides) {
+                currentSlideIndex++;
+                showSlide(currentSlideIndex);
+            }
+        });
+
+        restartLessonButton.addEventListener('click', () => {
+            currentSlideIndex = 0;
+            showSlide(currentSlideIndex);
+            document.querySelectorAll('.interactive-section input').forEach(input => {
+                input.disabled = false;
+                input.checked = false;
+            });
+            document.querySelectorAll('.feedback-message').forEach(feedback => {
+                feedback.classList.add('hidden');
+                feedback.textContent = '';
+                feedback.classList.remove('feedback-correct', 'feedback-incorrect');
+            });
+            document.querySelectorAll('.quiz-check-button').forEach(button => {
+                button.disabled = true;
+                button.classList.remove('hidden');
+            });
+        });
+
+        document.querySelectorAll('.quiz-check-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const quizId = e.target.dataset.quizId;
+                const correctAnswer = e.target.dataset.answer;
+                const feedbackDiv = document.getElementById(`feedback-${quizId}`);
+                const selectedOption = document.querySelector(`input[name="quiz${quizId}"]:checked`);
+                
+                feedbackDiv.classList.remove('hidden', 'feedback-correct', 'feedback-incorrect');
+                
+                if (selectedOption && selectedOption.value === correctAnswer) {
+                    feedbackDiv.classList.add('feedback-correct');
+                    feedbackDiv.textContent = 'Chính xác! 🎉';
+                    
+                    e.target.disabled = true;
+                    setTimeout(() => {
+                        currentSlideIndex++;
+                        showSlide(currentSlideIndex);
+                    }, 1500);
+                } else {
+                    feedbackDiv.classList.add('feedback-incorrect');
+                    feedbackDiv.textContent = 'Chưa đúng, hãy thử lại!';
+                }
+            });
+        });
+
+        document.querySelectorAll('.interactive-section input[type="radio"]').forEach(input => {
+            input.addEventListener('change', (e) => {
+                const quizId = e.target.name.replace('quiz', '');
+                const checkButton = document.querySelector(`.quiz-check-button[data-quiz-id="${quizId}"]`);
+                if (checkButton) {
+                    checkButton.disabled = false;
+                }
+            });
+        });
+
+        document.querySelectorAll('.quiz-check-button').forEach(button => {
+            button.disabled = true;
+        });
+
+        showSlide(currentSlideIndex);
+    </script>
+</body>
+</html>
